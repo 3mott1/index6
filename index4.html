@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>В ведіть ширину та висоту так щоб дорівнювала 350</p><br>
+    S = ширина (
+        <select name="" id="rad">
+            <option value="30">30</option>
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="25">25</option>
+        </select>
+        ) * висота (
+            <select name="" id="bal">
+                <option value="5">5</option>
+                <option value="14">14</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+            </select>
+        )
+        <p id="res"></p>
+        <button id="button">Перевірити</button>
+    <script>
+        btn = document.getElementById("button")
+
+        rad = document.getElementById("rad")
+        bal = document.getElementById("bal")
+        res = document.getElementById("res")
+
+        btn.addEventListener("click", fnc)
+
+        function fnc(){
+            rad_value = parseInt(rad.value)
+            bal_value = parseInt(bal.value)
+            
+            console.log(rad_value * bal_value )
+            if (rad_value * bal_value == 350){
+                res.innerHTML = "Вірно"
+            } else{
+                res.innerHTML = "Не вірно"
+            }
+        }
+    </script>
+</body>
+</html>

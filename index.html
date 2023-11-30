@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "result"></h1>
+    <p id="odd"></p>
+    <script>
+        a = Math.random(0,10);        
+        res = Math.floor(a*10);
+        odd_p = document.getElementById("odd");
+        answer = parseInt(prompt("Відгадай число від 0 до 9"));
+        str = ''
+        if (res == answer){
+            str = "Вгадав!"
+        } else{
+            str = "Не вгадав на " + (Math.abs(res-answer))+ "одиниць"
+        }
+
+        odd_p.innerHTML = str;
+        // ((Номер року ділиться на 4 ТА Номер року не ділиться  на 100)АБО Номер року ділиться на 400)
+    </script>
+</body>
+</html>

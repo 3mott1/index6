@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Оберіть ширину та висоту прямокутника такими, щоб його площа дорівнювала 300</h1>
+        <select name="" id="digital">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+        <select name="" id="digital2">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="30">30</option>
+        </select>
+
+    
+<script>
+var_digital = document.getElementById("digital")
+var_digital2 = document.getElementById("digital2")
+var_digital.addEventListener("change",f)
+var_digital2.addEventListener("change",f)
+function f(){
+    a = parseInt(var_digital.value)
+    b = parseInt(var_digital2.value)
+    s = a*b
+
+    if (s==300){
+        alert("correct")
+    } 
+    console.log(var_digital.value)
+    console.log(var_digital2.value)
+}
+</script>
+</body>
+
+</html>

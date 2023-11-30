@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "result"></h1>
+    <p id="odd"></p>
+    <select name="" id="digit">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <p id="result"></p>
+    <script>
+        a = Math.random(0,10);        
+        res = Math.floor(a*4);
+        odd_p = document.getElementById("odd");
+        r = document.getElementById("result");
+        d = document.getElementById("digit");
+
+        d.addEventListener("change",f);
+        function f(){
+            answer = parseInt(d.value);
+            
+            if (res == answer){
+            str = "Вгадав!"
+        } else{
+            str = "Не вгадав на " + (Math.abs(res-answer))+ "одиниць"
+        }
+
+
+
+        r.innerHTML = str;
+        }
+
+       
+        // ((Номер року ділиться на 4 ТА Номер року не ділиться  на 100)АБО Номер року ділиться на 400)
+    </script>
+</body>
+</html>
